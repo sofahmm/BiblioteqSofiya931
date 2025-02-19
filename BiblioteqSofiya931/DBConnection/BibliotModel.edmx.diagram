@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="c9ecbd3e72be4fe19e1b402d5b1cb25d" Name="Diagram1">
+        <EntityTypeShape EntityType="BiblioteqKymSofiyaModel.Author" Width="1.5" PointX="0.75" PointY="2" IsExpanded="true" />
+        <EntityTypeShape EntityType="BiblioteqKymSofiyaModel.Book" Width="1.5" PointX="3" PointY="1" IsExpanded="true" />
+        <EntityTypeShape EntityType="BiblioteqKymSofiyaModel.CreateBuild" Width="1.5" PointX="0.75" PointY="5.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="BiblioteqKymSofiyaModel.Employee" Width="1.5" PointX="0.75" PointY="13.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="BiblioteqKymSofiyaModel.Hall" Width="1.5" PointX="0.75" PointY="7.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="BiblioteqKymSofiyaModel.HistoryReaderTicket" Width="1.5" PointX="5.25" PointY="1.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="BiblioteqKymSofiyaModel.Janr" Width="1.5" PointX="0.75" PointY="10.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="BiblioteqKymSofiyaModel.Post" Width="1.5" PointX="1.5" PointY="19.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="BiblioteqKymSofiyaModel.Reader" Width="1.5" PointX="0.75" PointY="22.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="BiblioteqKymSofiyaModel.ReadTicket" Width="1.5" PointX="3" PointY="15.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="BiblioteqKymSofiyaModel.sysdiagrams" Width="1.5" PointX="2.75" PointY="5.75" IsExpanded="true" />
+        <AssociationConnector Association="BiblioteqKymSofiyaModel.FK_Book_Author" ManuallyRouted="false" />
+        <AssociationConnector Association="BiblioteqKymSofiyaModel.FK_Book_CreateBuild" ManuallyRouted="false" />
+        <AssociationConnector Association="BiblioteqKymSofiyaModel.FK_Book_Hall" ManuallyRouted="false" />
+        <AssociationConnector Association="BiblioteqKymSofiyaModel.FK_Book_Janr" ManuallyRouted="false" />
+        <AssociationConnector Association="BiblioteqKymSofiyaModel.FK_HistoryReaderTicket_Book" ManuallyRouted="false" />
+        <AssociationConnector Association="BiblioteqKymSofiyaModel.FK_Employee_Post" ManuallyRouted="false" />
+        <AssociationConnector Association="BiblioteqKymSofiyaModel.FK_ReadTicket_Employee" ManuallyRouted="false" />
+        <AssociationConnector Association="BiblioteqKymSofiyaModel.FK_HistoryReaderTicket_ReadTicket" ManuallyRouted="false" />
+        <AssociationConnector Association="BiblioteqKymSofiyaModel.FK_ReadTicket_Reader" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>
