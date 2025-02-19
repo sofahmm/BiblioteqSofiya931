@@ -10,4 +10,5 @@ namespace BiblioteqSofiya931.DBConnection
     {
         public static BiblioteqKymSofiyaEntities biblioteq = new BiblioteqKymSofiyaEntities();  
     }
+
 }
