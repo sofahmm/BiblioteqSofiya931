@@ -80,5 +80,9 @@
             Background="DarkRed"
             Foreground="White"
             Click="exitBtn_Click"/>
+        <Frame x:Name="menuFr"
+               Grid.Column="2"
+               Grid.ColumnSpan="6"
+               Grid.RowSpan="8"/>
     </Grid>
 </Window>
