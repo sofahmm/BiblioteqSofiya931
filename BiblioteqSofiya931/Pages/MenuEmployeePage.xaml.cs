@@ -12,19 +12,17 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
-using BiblioteqSofiya931.Pages;
 
-namespace BiblioteqSofiya931
+namespace BiblioteqSofiya931.Pages
 {
     /// <summary>
-    /// Логика взаимодействия для MainWindow.xaml
+    /// Логика взаимодействия для MenuEmployeePage.xaml
     /// </summary>
-    public partial class MainWindow : Window
+    public partial class MenuEmployeePage : Page
     {
-        public MainWindow()
+        public MenuEmployeePage()
         {
             InitializeComponent();
-            newFrame.NavigationService.Navigate(new AuthorizationPage());
         }
     }
 }

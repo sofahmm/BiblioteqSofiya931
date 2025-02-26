@@ -12,19 +12,22 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
-using BiblioteqSofiya931.Pages;
 
-namespace BiblioteqSofiya931
+namespace BiblioteqSofiya931.Pages
 {
     /// <summary>
-    /// Логика взаимодействия для MainWindow.xaml
+    /// Логика взаимодействия для AutorizationReaderPage.xaml
     /// </summary>
-    public partial class MainWindow : Window
+    public partial class AutorizationReaderPage : Page
     {
-        public MainWindow()
+        public AutorizationReaderPage()
         {
             InitializeComponent();
-            newFrame.NavigationService.Navigate(new AuthorizationPage());
+        }
+
+        private void loginBtn_Click(object sender, RoutedEventArgs e)
+        {
+
         }
     }
 }
