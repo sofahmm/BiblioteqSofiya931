@@ -12,6 +12,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using BiblioteqSofiya931.Windows;
 
 namespace BiblioteqSofiya931.Pages
 {
@@ -27,7 +28,8 @@ namespace BiblioteqSofiya931.Pages
 
         private void loginBtn_Click(object sender, RoutedEventArgs e)
         {
-            NavigationService.Navigate(new MenuEmployeePage());
+            MenuEmployeeWindow menuEmployeeWindow = new MenuEmployeeWindow();
+            menuEmployeeWindow.Show();
         }
 
         private void loginReaderBtn_Click(object sender, RoutedEventArgs e)

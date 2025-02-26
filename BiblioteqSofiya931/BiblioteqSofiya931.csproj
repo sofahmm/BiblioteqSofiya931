@@ -64,6 +64,9 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="Windows\MenuEmployeeWindow.xaml.cs">
+      <DependentUpon>MenuEmployeeWindow.xaml</DependentUpon>
+    </Compile>
     <Page Include="MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
@@ -133,7 +136,7 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="Pages\MenuEmployeePage.xaml">
+    <Page Include="Windows\MenuEmployeeWindow.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -144,9 +147,6 @@
     </Compile>
     <Compile Include="Pages\AutorizationReaderPage.xaml.cs">
       <DependentUpon>AutorizationReaderPage.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="Pages\MenuEmployeePage.xaml.cs">
-      <DependentUpon>MenuEmployeePage.xaml</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs">
       <SubType>Code</SubType>
