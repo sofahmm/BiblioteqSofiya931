@@ -11,6 +11,7 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
+using BiblioteqSofiya931.Pages;
 
 namespace BiblioteqSofiya931.Windows
 {
@@ -26,7 +27,7 @@ namespace BiblioteqSofiya931.Windows
 
         private void readerBtn_Click(object sender, RoutedEventArgs e)
         {
-
+            menuFr.NavigationService.Navigate(new ReadersPage());
         }
 
         private void bookBtn_Click(object sender, RoutedEventArgs e)
