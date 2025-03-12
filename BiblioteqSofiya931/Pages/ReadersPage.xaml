@@ -30,39 +30,58 @@
             <RowDefinition/>
         </Grid.RowDefinitions>
         <ListView Grid.ColumnSpan="6"
-                  Grid.RowSpan="8">
+                  Grid.RowSpan="8"
+                  ItemsSource="{Binding readersTicket}">
             <ListView.View>
                 <GridView>
                     <GridView.Columns>
-                        <GridViewColumn Header="Читательский билет">
+                        <GridViewColumn Header="ID билетa" Width="70">
                             <GridViewColumn.CellTemplate>
                                 <DataTemplate>
-                                    <TextBlock/>
+                                    <TextBlock Text="{Binding ID}"/>
                                 </DataTemplate>
                             </GridViewColumn.CellTemplate>
                         </GridViewColumn>
-                        <GridViewColumn Header="ФИО">
+                        <GridViewColumn Header="ФИО читателя" Width="150">
                             <GridViewColumn.CellTemplate>
                                 <DataTemplate>
                                     <StackPanel>
-                                        <TextBlock/>
-                                        <TextBlock/>
-                                        <TextBlock/>
+                                        <TextBlock Text="{Binding Reader.Lastname}"/>
+                                        <TextBlock Text="{Binding Reader.Name}"/>
+                                        <TextBlock Text="{Binding Reader.Patronymic}"/>
                                     </StackPanel>
                                 </DataTemplate>
                             </GridViewColumn.CellTemplate>
                         </GridViewColumn>
-                        <GridViewColumn Header="Дата рождения">
+                        <GridViewColumn Header="Дата рождения" Width="110">
                             <GridViewColumn.CellTemplate>
                                 <DataTemplate>
-                                    <TextBlock/>
+                                    <TextBlock Text="{Binding Reader.Birthdate, StringFormat=dd.MM.yyyy}"/>
                                 </DataTemplate>
                             </GridViewColumn.CellTemplate>
                         </GridViewColumn>
-                        <GridViewColumn Header="Номер телефона">
+                        <GridViewColumn Header="Дата регистрации" Width="120">
                             <GridViewColumn.CellTemplate>
                                 <DataTemplate>
-                                    <TextBlock/>
+                                    <TextBlock Text="{Binding DateRegistr, StringFormat=dd.MM.yyyy}"/>
+                                </DataTemplate>
+                            </GridViewColumn.CellTemplate>
+                        </GridViewColumn>
+                        <GridViewColumn Header="ФИО сотрудника" Width="150">
+                            <GridViewColumn.CellTemplate>
+                                <DataTemplate>
+                                    <StackPanel>
+                                        <TextBlock Text="{Binding Employee.Lastname}"/>
+                                        <TextBlock Text="{Binding Employee.Name}"/>
+                                        <TextBlock Text="{Binding Employee.Patronymic}"/>
+                                    </StackPanel>
+                                </DataTemplate>
+                            </GridViewColumn.CellTemplate>
+                        </GridViewColumn>
+                        <GridViewColumn Header="Номер телефона" Width="115 ">
+                            <GridViewColumn.CellTemplate>
+                                <DataTemplate>
+                                    <TextBlock Text="{Binding Reader.Phone}"/>
                                 </DataTemplate>
                             </GridViewColumn.CellTemplate>
                         </GridViewColumn>

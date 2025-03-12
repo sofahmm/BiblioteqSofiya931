@@ -1,4 +1,5 @@
-﻿using System;
+﻿using BiblioteqSofiya931.DBConnection;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -20,9 +21,13 @@ namespace BiblioteqSofiya931.Pages
     /// </summary>
     public partial class ReadersPage : Page
     {
+        public static List<ReadTicket> readersTicket { get; set; } 
         public ReadersPage()
         {
             InitializeComponent();
+            readersTicket  = new List<ReadTicket>(DBConnection.Connection.biblioteq.ReadTicket.
+                Where(i => i.Reader.IsDelete == false && i.IsDelete == false).ToList());
+            this.DataContext = this;
         }
     }
 }
