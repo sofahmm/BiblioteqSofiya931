@@ -32,7 +32,7 @@ namespace BiblioteqSofiya931.Windows
 
         private void bookBtn_Click(object sender, RoutedEventArgs e)
         {
-
+            menuFr.NavigationService.Navigate(new BookksPage());
         }
 
         private void reportBtn_Click(object sender, RoutedEventArgs e)
