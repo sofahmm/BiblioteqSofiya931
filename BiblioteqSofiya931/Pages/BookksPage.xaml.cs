@@ -34,5 +34,13 @@ namespace BiblioteqSofiya931.Pages
             Windows.AddBookWindow addBookWindow = new Windows.AddBookWindow();
             addBookWindow.Show();
         }
+
+        private void SearchTitleTb_TextChanged(object sender, TextChangedEventArgs e)
+        {
+            if(SearchTitleTb.Text == "")
+                BooksLv.ItemsSource = new List<Book>(Connection.biblioteq.Book.Where(i => i.IsDelete == false).ToList());
+            else
+                BooksLv.ItemsSource = books.Where(i => i.Name == SearchTitleTb.Text).ToList();  
+        }
     }
 }

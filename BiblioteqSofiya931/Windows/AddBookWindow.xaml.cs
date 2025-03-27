@@ -72,5 +72,17 @@ namespace BiblioteqSofiya931.Windows
                 MessageBox.Show("Для начала выберите зал!");
             }
         }
+
+        private void AddAuthorBtn_Click(object sender, RoutedEventArgs e)
+        {
+            AddAuthorWindow addAuthorWindow = new AddAuthorWindow();
+            addAuthorWindow.Show();
+
+        }
+
+        private void UpdateBookBtn_Click(object sender, RoutedEventArgs e)
+        {
+            AuthorCm.ItemsSource = new List<Author>(Connection.biblioteq.Author.ToList());
+        }
     }
 }

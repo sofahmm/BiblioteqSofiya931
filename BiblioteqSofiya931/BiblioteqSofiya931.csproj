@@ -93,6 +93,9 @@
     <Compile Include="Pages\ReadersPage.xaml.cs">
       <DependentUpon>ReadersPage.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Windows\AddAuthorWindow.xaml.cs">
+      <DependentUpon>AddAuthorWindow.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Windows\AddBookWindow.xaml.cs">
       <DependentUpon>AddBookWindow.xaml</DependentUpon>
     </Compile>
@@ -179,6 +182,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Pages\ReadersPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Windows\AddAuthorWindow.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

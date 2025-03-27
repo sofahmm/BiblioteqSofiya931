@@ -30,9 +30,10 @@
             <RowDefinition/>
         </Grid.RowDefinitions>
         <ListView Grid.ColumnSpan="8"
-               Grid.Row="2"
-               Grid.RowSpan="6"
-               ItemsSource="{Binding books}">
+                   Grid.Row="2"
+                   Grid.RowSpan="6"
+                   x:Name="BooksLv"
+                   ItemsSource="{Binding books}">
             <ListView.View>
                 <GridView>
                     <GridView.Columns>
@@ -106,5 +107,14 @@
                 Content="Добавить новую книгу"
                 Name="AddBookBtn"
                 Click="AddBookBtn_Click"/>
+
+        <TextBox x:Name="SearchTitleTb"
+                 Grid.Column="2"
+                 Grid.ColumnSpan="2"
+                 Height="35"
+                 Width="200"
+                 FontSize="20"
+                 VerticalContentAlignment="Center"
+                 TextChanged="SearchTitleTb_TextChanged"/>
     </Grid>
 </Page>
