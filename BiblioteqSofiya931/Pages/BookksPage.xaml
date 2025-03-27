@@ -60,7 +60,7 @@
                                         Width="100">
                             <GridViewColumn.CellTemplate>
                                 <DataTemplate>
-                                    <TextBlock Text="{Binding YearMade}"/>
+                                    <TextBlock Text="{Binding YearMade, StringFormat=dd.MM.yyyy}"/>
                                 </DataTemplate>
                             </GridViewColumn.CellTemplate>
                         </GridViewColumn>
@@ -102,6 +102,9 @@
         </ListView>
         <Button Grid.ColumnSpan="2"
                 Width="150"
-                Height="40"/>
+                Height="40"
+                Content="Добавить новую книгу"
+                Name="AddBookBtn"
+                Click="AddBookBtn_Click"/>
     </Grid>
 </Page>

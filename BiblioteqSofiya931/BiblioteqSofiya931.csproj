@@ -93,6 +93,9 @@
     <Compile Include="Pages\ReadersPage.xaml.cs">
       <DependentUpon>ReadersPage.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Windows\AddBookWindow.xaml.cs">
+      <DependentUpon>AddBookWindow.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Windows\AddReaderTicketWindow.xaml.cs">
       <DependentUpon>AddReaderTicketWindow.xaml</DependentUpon>
     </Compile>
@@ -176,6 +179,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Pages\ReadersPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Windows\AddBookWindow.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

@@ -28,5 +28,11 @@ namespace BiblioteqSofiya931.Pages
             books = new List<Book>(Connection.biblioteq.Book.Where(i => i.IsDelete == false).ToList());
             this.DataContext = this;
         }
+
+        private void AddBookBtn_Click(object sender, RoutedEventArgs e)
+        {
+            Windows.AddBookWindow addBookWindow = new Windows.AddBookWindow();
+            addBookWindow.Show();
+        }
     }
 }

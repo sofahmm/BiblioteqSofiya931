@@ -51,7 +51,7 @@
                 HorizontalAlignment="Right"
                 VerticalAlignment="Top"/>
         <Button x:Name="UpdateBtn"
-                Height="25"
+                Height="25"  
                 Width="60"
                 Content="Обновить"
                 FontSize="10"
