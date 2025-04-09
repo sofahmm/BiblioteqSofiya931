@@ -114,7 +114,20 @@
                  Height="35"
                  Width="200"
                  FontSize="20"
+                 HorizontalAlignment="Left"
                  VerticalContentAlignment="Center"
                  TextChanged="SearchTitleTb_TextChanged"/>
+        <ComboBox Grid.Column="4"
+                  Grid.ColumnSpan="2"
+                  Height="35"
+                  HorizontalAlignment="Left"
+                  Width="150"
+                  ItemsSource="{Binding halls}">
+            <ComboBox.ItemTemplate>
+                <DataTemplate>
+                    <TextBlock Text="{Binding Name}"/>
+                </DataTemplate>
+            </ComboBox.ItemTemplate>
+        </ComboBox>
     </Grid>
 </Page>

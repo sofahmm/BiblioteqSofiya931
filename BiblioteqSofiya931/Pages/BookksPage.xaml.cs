@@ -22,10 +22,13 @@ namespace BiblioteqSofiya931.Pages
     public partial class BookksPage : Page
     {
         public static List<Book> books { get; set; }
+        public static List<Hall> halls { get; set; }
         public BookksPage()
         {
             InitializeComponent();
             books = new List<Book>(Connection.biblioteq.Book.Where(i => i.IsDelete == false).ToList());
+            halls = new List<Hall>(Connection.biblioteq.Hall.ToList());
+            halls.Insert(0, new Hall() { ID = -1, Name = "Вывести всех" });
             this.DataContext = this;
         }
 

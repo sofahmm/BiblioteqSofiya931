@@ -60,5 +60,10 @@ namespace BiblioteqSofiya931.Pages
             Windows.AddReaderTicketWindow addReaderTicket = new Windows.AddReaderTicketWindow();
             addReaderTicket.Show();
         }
+
+        private void ReadersListBtn_Click()
+        {
+
+        }
     }
 }
