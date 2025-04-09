@@ -40,7 +40,17 @@ namespace BiblioteqSofiya931.Windows
 
         private void EditReaderBtn_Click(object sender, RoutedEventArgs e)
         {
+            var reader = ReadersLv.SelectedItem as Reader;
+            if(reader != null)
+            {
+                Windows.EditReaderBtn editReaderWindow = new Windows.EditReaderBtn(reader); //Случайно назвала EditReaderBtn, у вас скорее всего называется EditReaderWindow, не путайтесь
+                editReaderWindow.Show();
 
+            }
+            else
+            {
+                MessageBox.Show("Для редактирования выберите читателя");
+            }
         }
 
         private void DeleteReadreBtn_Click(object sender, RoutedEventArgs e)
@@ -60,6 +70,11 @@ namespace BiblioteqSofiya931.Windows
             {
                 MessageBox.Show("Вы никого не выбрали.");
             }
+        }
+
+        private void ReadersLv_MouseDown(object sender, MouseButtonEventArgs e)
+        {
+            ReadersLv.ItemsSource = new List<Reader>(DBConnection.Connection.biblioteq.Reader.Where(i => i.IsDelete == false).ToList());
         }
     }
 }

@@ -58,7 +58,8 @@
                   Grid.Column="2"
                   Grid.RowSpan="8"
                   x:Name="ReadersLv"
-                  ItemsSource="{Binding readers}">
+                  ItemsSource="{Binding readers}"
+                  MouseDown="ReadersLv_MouseDown">
             <ListView.View>
                 <GridView>
                     <GridView.Columns>
