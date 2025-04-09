@@ -1,4 +1,5 @@
 ﻿using BiblioteqSofiya931.DBConnection;
+using BiblioteqSofiya931.Windows;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -61,9 +62,10 @@ namespace BiblioteqSofiya931.Pages
             addReaderTicket.Show();
         }
 
-        private void ReadersListBtn_Click()
+        private void ReadersListBtn_Click(object sender, RoutedEventArgs e)
         {
-
+            ReadersListWindow readersList = new ReadersListWindow();
+            readersList.Show();
         }
     }
 }
