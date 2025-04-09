@@ -108,6 +108,9 @@
     <Compile Include="Windows\MenuEmployeeWindow.xaml.cs">
       <DependentUpon>MenuEmployeeWindow.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Windows\ReadersListWindow.xaml.cs">
+      <DependentUpon>ReadersListWindow.xaml</DependentUpon>
+    </Compile>
     <Page Include="MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
@@ -202,6 +205,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Windows\MenuEmployeeWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Windows\ReadersListWindow.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

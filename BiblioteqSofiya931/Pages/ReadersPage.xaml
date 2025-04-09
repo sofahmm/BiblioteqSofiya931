@@ -111,8 +111,7 @@
                   Grid.Column="6"
                   Grid.Row="3"
                   Grid.ColumnSpan="2"
-                  Height="35"
-                  Width="150">
+                  Margin="10">
             <ComboBox.ItemTemplate>
                 <DataTemplate>
                     <StackPanel>
@@ -130,5 +129,11 @@
                 Grid.ColumnSpan="2"
                 Grid.Row="5"
                 Click="AddReaderTicketBtn_Click"/>
+        <Button x:Name="ReadersListBtn"
+                Grid.Column="6"
+                Grid.ColumnSpan="2"
+                Grid.Row="6"
+                Content="Список чиателей"
+                Click="ReadersListBtn_Click"/>
     </Grid>
 </Page>
