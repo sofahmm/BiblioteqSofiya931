@@ -1,7 +1,9 @@
 ﻿using BiblioteqSofiya931.DBConnection;
 using System;
 using System.Collections.Generic;
+using System.ComponentModel;
 using System.Linq;
+using System.Security.Policy;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows;
@@ -25,16 +27,25 @@ namespace BiblioteqSofiya931.Windows
         {
             InitializeComponent();
             readers = new List<Reader>(DBConnection.Connection.biblioteq.Reader.Where(i => i.IsDelete == false).ToList());
+      
+
             this.DataContext = this;
         }
 
         private void SearchReadersTb_TextChanged(object sender, TextChangedEventArgs e)
         {
+            var phone = SearchReadersTb.Text;
+            if(phone == "")
+                ReadersLv.ItemsSource = new List<Reader>(DBConnection.Connection.biblioteq.Reader.Where(i => i.IsDelete == false).ToList());
+            else
+                ReadersLv.ItemsSource = new List<Reader>(Connection.biblioteq.Reader.Where(i => i.Phone == phone && i.IsDelete == false).ToList());
 
         }
 
         private void BirthDateDp_SelectedDateChanged(object sender, SelectionChangedEventArgs e)
         {
+            var date = BirthDateDp.SelectedDate;
+            ReadersLv.ItemsSource = new List<Reader>(Connection.biblioteq.Reader.Where(i => i.Birthdate >= date && i.IsDelete == false).ToList());
 
         }
 
